@@ -1,0 +1,16 @@
+{
+  "name": "earthquake_zen_garden",
+  "version": "1.0.0",
+  "description": "Earthquake zen garden",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0"
+  }
+}
