@@ -1,25 +1,14 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Header from './components/header';
-import data from './earthquake_data/earthquakedata.json';
+import EarthquakeList from './components/earthquake_list';
 
 const App = () => {
-
-    useEffect(() => {
-        console.log(data)
-        getData()
-    },[])
-
-    const getData = () => {
-        fetch("earthquake_data/earthquakedata.json")
-            .then(res => res.json())
-            .then(data => console.log(data));
-    }
-
     return (
         <>
             <Header />
+            <EarthquakeList />
         </>
     );
 }
 
-export default App
+export default App;
