@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 :root {
     --light-grey: #ededed;
@@ -27,4 +27,34 @@ header {
 .header-title {
     color: var(--dark-grey);
     font-weight: 700;
+}
+
+.earthquake-list {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.earthquake-title {
+    text-align: center;
+}
+
+th {
+    font-weight: 400;
+}
+
+td {
+    font-weight: 700;
+}
+
+td:nth-of-type(2) {
+    text-align: center;
+}
+
+td:nth-of-type(3) {
+    text-align: center;
 }
