@@ -9,7 +9,7 @@ const TableRow = (props) => {
         <Router>
             <tr>
                 <td>
-                    <Link to={`${props.id}/earthquakedetail`}>
+                    <Link to={`earthquakedetail/${props.id}`}>
                         {props.place}
                     </Link>
                 </td>
