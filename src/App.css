@@ -19,7 +19,7 @@ header {
 }
 
 .site-logo {
-    max-width: 70px;
+    max-width: 60px;
 }
 
 .header-title {
@@ -37,8 +37,24 @@ header {
     padding: 50px 0;
 }
 
-.earthquake-title {
+.heading {
     text-align: center;
+}
+
+.earthquake-detail-table {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.earthquake-detail-table th {
+    font-weight: 700;
+    text-align: left;
+}
+
+.earthquake-detail-table td {
+    color: var(--dark-grey);
+    font-weight: 700;
+    text-align: left;
 }
 
 th {
@@ -64,4 +80,37 @@ td:nth-of-type(3) {
 
 .desc:after {
     content: " \25BC";
+}
+
+.profile-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.profile-data {
+    display: flex;
+    max-width: 800px;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.profile-data table {
+    width: 50%;
+}
+
+.profile-table th {
+    width: 30%;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+.profile-table tr {
+    line-height: 1.5;
+}
+
+.profile-table td {
+    font-weight: 700;
+    color: var(--dark-grey);
+    text-align: left;
 }
