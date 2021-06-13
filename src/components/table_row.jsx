@@ -6,17 +6,15 @@ const TableRow = (props) => {
     let date = moment(props.date).format('MMMM Do YYYY, h:mm:ss a');
 
     return (
-        <Router>
-            <tr>
-                <td>
-                    <Link to={`earthquakedetail/${props.id}`}>
-                        {props.place}
-                    </Link>
-                </td>
-                <td>{props.mag}</td>
-                <td>{date}</td>
-            </tr>
-        </Router>
+        <tr>
+            <td>
+                <Link to={`/earthquakedetail/${props.id}`}>
+                    {props.place}
+                </Link>
+            </td>
+            <td>{props.mag}</td>
+            <td>{date}</td>
+        </tr>
     );
 }
 

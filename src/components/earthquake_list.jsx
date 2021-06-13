@@ -44,7 +44,7 @@ const EarthquakeList = () => {
 
     return (
         <div className="earthquake-list">
-            <h2 className="earthquake-title">{metadata.title}</h2>
+            <h2 className="heading">{metadata.title}</h2>
             <table>
                 <tbody>
                     <tr>
