@@ -3,7 +3,7 @@ import Layout from './components/layout';
 import EarthquakeList from './components/earthquake_list';
 import Profile from './components/user_profile';
 import EarthquakeDetail from './components/earthquake_detail';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 const App = () => {
     return (
@@ -18,6 +18,7 @@ const App = () => {
                 <Route exact path="/profile">
                     <Profile />
                 </Route>
+                <Redirect to="/" />
             </Layout>
         </Switch>
     );
