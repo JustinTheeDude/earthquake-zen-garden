@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import createTime from '../utils/utils';
 
 const TableRow = (props) => {
-    const { id, place, mag, time } = props;
-    let date = createTime(time);
+    const { id, place, mag, date } = props;
+    let earthquakeDate = createTime(date);
 
     return (
         <tr>
@@ -14,7 +14,7 @@ const TableRow = (props) => {
                 </Link>
             </td>
             <td>{mag}</td>
-            <td>{date}</td>
+            <td>{earthquakeDate}</td>
         </tr>
     );
 }
