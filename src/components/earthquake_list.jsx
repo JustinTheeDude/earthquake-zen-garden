@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import TableRow from './table_row';
-import data from '../earthquake_data/earthquakedata.json';
 
-const EarthquakeList = () => {
-    const { features, metadata } = data.data;
+const EarthquakeList = (props) => {
+    const { features, metadata } = props.earthquakedata;
     const sortedFeatures = [...features];
     const sortedByMag = sortedFeatures.sort((a, b) => b.properties.mag - a.properties.mag);
     const [ sortedFeature, setSortedFeature ] = useState(sortedByMag);
     const [ sortedBy, setSortedBy ] = useState("");
     const [ sortedField, setSortedField ] = useState("");
-
 
     const sortByFieldType = (type) => {
         let sortedField = [];

@@ -4,7 +4,7 @@ import Header from '../components/header.jsx';
 const Layout = (props) => {
     return (
         <>
-            <Header />
+            <Header siteData={props.siteData} userData={props.userData}/>
             {props.children}
         </>
     )

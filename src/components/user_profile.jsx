@@ -1,35 +1,34 @@
 import React from 'react';
-import data from '../earthquake_data/earthquakedata.json';
 
-const Profile = () => {
-    const { profile } = data;
+const Profile = (props) => {
+    const { avatarImage, firstName, lastName, phone, email, bio } = props.profiledata;
 
     return (
         <>
             <h2 className="heading">Profile</h2>
             <div className="profile-data">
-                <img src={profile.avatarImage} className="profile-image" alt="Profile Avatar" />
+                <img src={avatarImage} className="profile-image" alt="Profile Avatar" />
                 <table className="profile-table">
                     <tbody>
                         <tr>
                             <th>First name</th>
-                            <td>{profile.firstName}</td>
+                            <td>{firstName}</td>
                         </tr>
                         <tr>
                             <th>Last name</th>
-                            <td>{profile.lastName}</td>
+                            <td>{lastName}</td>
                         </tr>
                         <tr>
                             <th>Phone</th>
-                            <td>{profile.phone}</td>
+                            <td>{phone}</td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td>{profile.email}</td>
+                            <td>{email}</td>
                         </tr>
                         <tr>
                             <th>Bio</th>
-                            <td>{profile.bio}</td>
+                            <td>{bio}</td>
                         </tr>
                     </tbody>
                 </table>

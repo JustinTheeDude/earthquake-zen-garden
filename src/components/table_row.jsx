@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import moment from 'moment';
+import createTime from '../utils/utils';
 
 const TableRow = (props) => {
-    let date = moment(props.date).format('MMMM Do YYYY, h:mm:ss a');
+    const { id, place, mag, time } = props;
+    let date = createTime(time);
 
     return (
         <tr>
             <td>
-                <Link to={`/earthquakedetail/${props.id}`}>
-                    {props.place}
+                <Link to={`/earthquakedetail/${id}`}>
+                    {place}
                 </Link>
             </td>
-            <td>{props.mag}</td>
+            <td>{mag}</td>
             <td>{date}</td>
         </tr>
     );

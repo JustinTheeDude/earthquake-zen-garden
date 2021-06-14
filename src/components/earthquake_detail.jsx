@@ -1,26 +1,26 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../earthquake_data/earthquakedata.json';
-import moment from 'moment';
+import createTime from '../utils/utils';
 
-const EarthquakeDetail = () => {
-    let { id } = useParams();
-    const { features } = data.data;
+const EarthquakeDetail = (props) => {
+    const { id } = useParams();
+    const { features } = props.earthquakedata;
     const singleEarthquakeObject = features.find(feature => feature.id == id);
-    let date = moment(singleEarthquakeObject.properties.time).format('MMMM Do YYYY, h:mm:ss a');
+    const { title, mag, status, tsunami, type, time } = singleEarthquakeObject.properties;
+    const date = createTime(time);
 
     return (
         <div className="earthquake-list">
-            <h2 className="heading">{singleEarthquakeObject.properties.title}</h2>
+            <h2 className="heading">{title}</h2>
             <table className="earthquake-detail-table">
                 <tbody>
                     <tr>
                         <th>Title</th>
-                        <td>{singleEarthquakeObject.properties.title}</td>
+                        <td>{title}</td>
                     </tr>
                     <tr>
                         <th>Magnitude</th>
-                        <td>{singleEarthquakeObject.properties.mag}</td>
+                        <td>{mag}</td>
                     </tr>
                     <tr>
                         <th>Time</th>
@@ -28,15 +28,15 @@ const EarthquakeDetail = () => {
                     </tr>
                     <tr>
                         <th>Status</th>
-                        <td>{singleEarthquakeObject.properties.status}</td>
+                        <td>{status}</td>
                     </tr>
                     <tr>
                         <th>Tsunami</th>
-                        <td>{singleEarthquakeObject.properties.tsunami}</td>
+                        <td>{tsunami}</td>
                     </tr>
                     <tr>
                         <th>Type</th>
-                        <td>{singleEarthquakeObject.properties.type}</td>
+                        <td>{type}</td>
                     </tr>
                 </tbody>
             </table>
